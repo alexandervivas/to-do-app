@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div>
+                <h1>Todos</h1>
+                <input type="text" class="form-control" placeholder="Add todo" ng-model="textBar">
+                <button id="addTodo" class="btn btn-success" ng-click="createNewTodo()">Add</button>
+                <button id="deleteSelected" class="btn btn-warning" ng-click="deleteSelectedTodos()">Delete selected</button>
+                <button id="deleteAll" class="btn btn-danger" ng-click="deleteAllTodos()">Delete all</button>
+
+                <hr>
+                <ul id="sortable" class="list-unstyled">
+                    <li class="ui-state-default" ng-repeat="todo in todoList">
+                        <div class="checkbox">
+                            <label><input type="checkbox" ng-model="todo.checked" />{{todo.text}}</label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
